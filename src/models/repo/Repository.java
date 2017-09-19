@@ -291,7 +291,7 @@ public class Repository implements IRepo {
             ResultSet rs = statement.executeQuery();
             if (rs.next()) {
                 temp.setIdSpecialization(idSpecialization);
-                temp.setSpecializationName("Specialization");
+                temp.setSpecializationName(rs.getString("Specialization"));
             }
             return temp;
         } catch (Exception e) {
