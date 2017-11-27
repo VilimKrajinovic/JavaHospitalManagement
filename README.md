@@ -11,4 +11,6 @@
 		- where n == 1 || 2
 			- 1 returns console view
 			- 2 returns GUI view
+
+### Made by: Vilim Krajinović
 	
