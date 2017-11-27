@@ -36,14 +36,21 @@ import models.classes.patient.ProffesionDetails;
  */
 public class Repository implements IRepo {
 
+    private static final String  SERVER_NAME     = "VILIMKRAJINOVIC";
+    private static final String  USERNAME        = "sa";
+    private static final String  PASSWORD        = "SQL";
+    private static final String  DATABASE_NAME   = "VirgoHospital";
+    private static final int     PORT_NUMBER     = 1433;
+    
+    
     @Override
     public DataSource getSource() {
         SQLServerDataSource ds = new SQLServerDataSource();
-        ds.setServerName("VILIMKRAJINOVIC");
-        ds.setUser("sa");
-        ds.setPassword("SQL");
-        ds.setDatabaseName("VirgoHospital");
-        ds.setPortNumber(1433);
+        ds.setServerName(SERVER_NAME);
+        ds.setUser(USERNAME);
+        ds.setPassword(PASSWORD);
+        ds.setDatabaseName(DATABASE_NAME);
+        ds.setPortNumber(PORT_NUMBER);
 
         return ds;
     }
